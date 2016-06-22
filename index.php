@@ -3,7 +3,8 @@ $ip = $_SERVER['REMOTE_ADDR']; // Recuperation de l'IP du visiteur
 $query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip)); //connection au serveur de ip-api.com et recuperation des données
 if($query && $query['status'] == 'success') 
 {
-    //code avec les variables
+    echo "Site de Production"<br />\n";
+	//code avec les variables
 	echo "Adresse IP = " . $ip ."<br />\n";
 	echo "Pays = " . $query['country'] . "<br />\n";
 	echo "Region = " . $query['regionName'] . "<br />\n";
